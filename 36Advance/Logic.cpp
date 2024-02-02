@@ -8,8 +8,6 @@ int find_saddle_elements(int matrix[N][N]) {
 	for (int i = 0; i < N; i++){
 		int min_row_element = 10;
 		int min_row_element_index = 0;
-		
-		int max_column_element_index = 0;
 
 		for (int j = 0; j < N; j++){
 			if (min_row_element > matrix[i][j]) {
@@ -26,8 +24,6 @@ int find_saddle_elements(int matrix[N][N]) {
 				max_column_element = matrix[k][min_row_element_index];
 			}
 		}
-
-		cout << "min_row " << min_row_element << " max_column " << max_column_element << endl;
 
 		if (max_column_element <= min_row_element) {
 			count++;
